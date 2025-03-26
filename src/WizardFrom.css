@@ -1,0 +1,98 @@
+/* Base styling */
+.wizard-form-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: url('parchment-texture.jpg');
+    border: 3px double #c0a062;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    font-family: 'EB Garamond', serif;
+    color: #3a2c0e;
+  }
+  
+  .ministry-header {
+    text-align: center;
+    border-bottom: 1px solid #c0a062;
+    margin-bottom: 2rem;
+  }
+  
+  /* Progress tracker */
+  .form-progress {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .step {
+    padding: 0.5rem;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .step.active {
+    border-bottom: 2px solid #8b4513;
+    font-weight: bold;
+  }
+  
+  /* Form inputs */
+  .parchment-input {
+    background: #fff9e6;
+    border: 1px solid #c0a062;
+    padding: 0.5rem;
+    width: 100%;
+    font-family: inherit;
+  }
+  
+  /* Custom checkboxes/radios */
+  .magical-checkbox, .magical-radio {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    cursor: pointer;
+  }
+  
+  /* Signature canvas */
+  .signature-box {
+    border: 1px dashed #8b4513;
+    height: 150px;
+    margin: 1rem 0;
+  }
+  
+  /* Blood pact styling */
+  .blood-pact-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Submit button */
+  .submit-button {
+    background: #8b4513;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .submit-button:hover {
+    background: #a0522d;
+    transform: scale(1.05);
+  }
+  
+  /* Animations */
+  @keyframes quillWrite {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100px); }
+  }
+  
+  .quill-animation {
+    position: relative;
+  }
+  
+  .quill-animation::after {
+    content: "✍️";
+    position: absolute;
+    animation: quillWrite 2s infinite;
+  }
